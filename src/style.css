@@ -776,11 +776,12 @@ footer img {
 
     #carrossel img 
     {
-        margin-top: 1rem;
+        margin-top: 3rem;
         width: 420px;
         height: 210px;
-        margin-left: 95px;
+        margin-left: 30px;
     }
+
     
     .lado-cuidados h1 h2 {
         font-size: 40px;
@@ -827,7 +828,6 @@ footer img {
     .apresentacao h2, .cima h2
     {
         font-size: 36px;
-        margin-right: 6rem;
     }
 
     .animais
@@ -902,14 +902,14 @@ footer img {
    
     #pessoa1 img 
     {
-        margin-left: 15rem;
+        margin-left: 10rem;
         width: 110px;
         height: 100px;
     }    
 
     #pessoa2 img, #pessoa3 img
     {
-        margin-left: 16rem;
+        margin-left: 10rem;
         width: 110px;
         height: 100px;
     }
@@ -920,6 +920,8 @@ footer img {
         gap: 10px;
         justify-items: center;
         align-items: center;
+        flex-wrap: wrap;
+
     }
 
     .brin_cachorro, .brin_gato, .brin_aves, .brin_peixe, .brin_roedores {
@@ -948,10 +950,24 @@ footer img {
         flex-direction: column;
     }
     
-    footer{
-
-        display: block;
+    .banho {
+        margin-left: 1.2rem;
     }
+
+    footer {
+        flex-direction: column;
+    }
+    .pag img {
+        width: 300px;
+        height: 20px;
+    }
+    
+    .rede{
+        flex-direction: row;
+        margin-right: 20.2rem;
+    }
+
+
 }
 
 @media (width >= 641px)
@@ -1025,7 +1041,7 @@ footer img {
        gap: 1rem;
     }
     .PROD {
-        margin-left: 10rem;
+        margin-left: 4rem;
     }
     
 
@@ -1121,8 +1137,8 @@ footer img {
 aside {
     display: flex;
     justify-content: center;
-    width: 25vh;
-    height: 100vh;
+    width: 26vh;
+    height: 200vh;
     position: fixed;
     top: 0;
     left: -250px;
