@@ -731,7 +731,7 @@ footer img {
     #menor
     {
        top: 400px;
-       margin-left: 25px;
+       margin-left: 4rem;
        width: 80%;
        font-size: 12px;
     }
@@ -739,7 +739,6 @@ footer img {
     .apresentacao h2
     {
         font-size: 90px;
-        padding: 0;
         width: 80%;
         display: flex;
         flex-wrap: wrap;
@@ -769,7 +768,6 @@ footer img {
 
     .cima h3 
     {
-        margin-left: 6.2rem;
         font-size: 50px;
         width: 30%;
     }
@@ -902,14 +900,14 @@ footer img {
    
     #pessoa1 img 
     {
-        margin-left: 10rem;
+        margin-left: 4rem;
         width: 110px;
         height: 100px;
     }    
 
     #pessoa2 img, #pessoa3 img
     {
-        margin-left: 10rem;
+        margin-left: 4rem;
         width: 110px;
         height: 100px;
     }
@@ -951,7 +949,7 @@ footer img {
     }
     
     .banho {
-        margin-left: 1.2rem;
+        margin-left: 0.1rem;
     }
 
     footer {
@@ -964,7 +962,7 @@ footer img {
     
     .rede{
         flex-direction: row;
-        margin-right: 20.2rem;
+        margin-right: 15rem;
     }
 
 
