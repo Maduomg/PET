@@ -1,0 +1,1055 @@
+<!DOCTYPE html>
+<html id="html" lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PETPATINHAS</title>
+    <link rel="stylesheet" href="./src/style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <link rel="icon" href="./src/img/patinhas.ico" type="image/x-icon">
+    <script src="../SITE TCM/src/pet shop.js">
+    </script>
+
+
+</head>
+
+
+<body onload="mostrarCachorro()">
+
+    <button class="scrolltop">
+        <img src="./src/img/patinha.png" onclick="backTop()" />
+    </button>
+
+
+    <header class="header1">
+
+        <header class="algo1" id="topo1" style="display: block;">
+            <section id="headercima">
+                <img class="pata" src="./src/img/pet shop - logo.png" />
+                <a href="#" class="logo">PETPATINHAS</a>
+
+                <div id="busca">
+                    <input type="text" id="txtbusca" placeholder="Buscar produtos, serviços..." />
+                </div>
+            </section>
+
+
+
+            <nav class="navbar">
+                <a class="button" href="#início">INÍCIO</a>
+                <a class="button" href="#produtos">PRODUTOS</a>
+                <a class="button" href="#sobre-nos">SOBRE NÓS</a>
+                <a class="button" href="https://maduomg.github.io/Faq.github.io/" target="_blank">PERGUNTAS
+                    FREQUENTES</a>
+                <a class="button" href="https://maduomg.github.io/" target="_blank">CADASTRE-SE</a>
+            </nav>
+        </header>
+
+    </header>
+
+    <button id="res" onclick="menu()">
+        <span class="linha">
+        </span>
+        <span class="linha">
+        </span>
+        <span class="linha">
+        </span>
+    </button>
+
+
+
+    <aside id="hamburguer">
+        <ul class="bar">
+            <a class="linkiBUR" href="#início">INÍCIO</a>
+            <a class="linkiBUR" href="#produtos">PRODUTOS</a>
+            <a class="linkiBUR" href="#sobre-nos">SOBRE NÓS</a>
+            <a class="linkiBUR" href="https://maduomg.github.io/Faq.github.io/" target="_blank">PERGUNTAS FREQUENTES</a>
+            <a class="linkiBUR" href="https://maduomg.github.io/" target="_blank">CADASTRE-SE</a>
+        </ul>
+    </aside>
+
+
+    <script language="JavaScript">
+        $("#topo2").hide();
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 20) {
+                $("#topo2").slideDown(500);
+                $("#topo1").slideUp(500);
+            }
+
+            else {
+                $("#topo2").slideUp(500);
+                $("#topo1").slideDown(500);
+            }
+        }
+        );
+    </script>
+
+    <!--Apresentação do site-->
+    <section class="apresentacao" id="início">
+        <h2>Aqui, cada <b>patinha</b> deixa uma <b>marca</b> de <b>felicidade!</b></h2>
+
+        <img src="./src/img/cachorro.png" />
+    </section>
+    <div id="menor">
+        <h2>Nossos peludinhos trazem alegria em cada passo, colorindo <p> nossos dias
+                com amor e carinho. Cada patinha é um lembrete de que a </p> felicidade
+            está nas pequenas coisas. Venha celebrar essa conexão <p> especial conosco!</p>
+        </h2>
+    </div>
+    <!--Fim-->
+
+    <section id="carrossel">
+        <img src="./src/img/carrossel/racao.png" name="slide" id="slide" />
+        <aside>
+            <div id="lateral_titulo"></div>
+            <br />
+            <div id="lateral_descr"></div>
+        </aside>
+    </section>
+
+    <p class="ante" onclick="anterior()">
+        <img src="./src/img/seta esquerda.png" />
+    </p>
+    <p class="prox" onclick="proximo()">
+        <img src="./src/img/seta direita.png" />
+    </p>
+
+
+    <div class="esquerda">
+        <h2>O que seu pet ganha aqui na PetPatinhas!</h2>
+    </div>
+
+    <section class="cuidados">
+        <div class="medicos">
+            <img src="./src/img/cuidado especiais.jpg" />
+            <div class="lado-cuidados">
+                <h2>Cuidados especiais</h2>
+                <h3>Nós oferecemos consultas <p>médicas com os melhores
+                    <p>profissionais.</p>
+                    </p>
+                </h3>
+            </div>
+        </div>
+
+        <div class="brincar">
+            <img src="./src/img/gato.jpg" />
+            <div class="lado-cuidados">
+                <h2>Muita diversão</h2>
+                <h3>Temos diversas linhas de <p>produtos para </p> divertir o seu pet.</h3>
+            </div>
+        </div>
+
+        <div class="banho">
+            <img src="./src/img/banho.jpg" />
+            <div class="lado-cuidados teste0413">
+                <h2>Cuidados ao pelo</h2>
+                <h3>Temos serviços de banho e tosa,sempre tentando <p> ao máximo deixar seu pet relaxado,</p> lindo
+                    e cheiroso com nossos produtos <p>e utensílios.</p>
+                    </p>
+                </h3>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="secprod" id="produtos">
+
+        <h1>Os <a>melhores</a> produtos para cada bichinho</h1>
+
+        <div class="animais">
+            <div class="btnCat" id="btncat_cachorro" onclick='mostrarCachorro()'>
+                Cachorro
+            </div>
+
+            <div class="btnCat" id="btncat_gato" onclick='mostrarGato()'>
+                Gato
+            </div>
+
+            <div class="btnCat" id="btncat_aves" onclick='mostrarAves()'>
+                Aves
+            </div>
+
+            <div class="btnCat" id="btncat_peixe" onclick='mostrarPeixe()'>
+                Peixe
+            </div>
+
+            <div class="btnCat" id="btncat_roedores" onclick='mostrarRoedores()'>
+                Roedores
+            </div>
+        </div>
+
+        <div></div>
+
+        <div class="cachorros" id="categoria_cachorro">
+            <div class="cima">
+                <h3>Rações</h3>
+            </div>
+
+            <ul class="itens_cachorro" id="prod_cachorro">
+                <div class="PROD">
+                    <img src="src/img/image 8.png">
+                    <div>
+                        <h1>Ração Golden Special </h1>
+                        <h2>para cães adultos frango e carne</h2>
+                        <span>R$ 21,90</span>
+                        <button>Adicionar no carrinho</button>
+                    </div>
+                </div>
+
+                <div class="PROD">
+                    <img src="src/img/ração 8.jpg">
+                    <div>
+                        <h1>Ração Golden Special </h1>
+                        <h2>para cães adultos frango e carne</h2>
+                        <span>R$ 3,90</span>
+                        <button>Adicionar no carrinho</button>
+                    </div>
+                </div>
+                <div class="PROD">
+                    <img src="src/img/ração 2.jpg">
+                    <div>
+                        <h1>Ração Golden Special </h1>
+                        <h2>para cães adultos frango e carne</h2>
+                        <span>R$ 190,90</span>
+                        <button>Adicionar no carrinho</button>
+                    </div>
+                </div>
+                <div class="PROD">
+                    <img src="src/img/ração 3.jpg">
+                    <div>
+                        <h1>Ração Golden Special </h1>
+                        <h2>para cães adultos frango e carne</h2>
+                        <span>R$ 42,90</span>
+                        <button>Adicionar no carrinho</button>
+                    </div>
+                </div>
+                <div class="PROD">
+                    <img src="src/img/ração 4 (2).jpg">
+                    <div>
+                        <h1>Ração Golden Special </h1>
+                        <h2>para cães adultos frango e carne</h2>
+                        <span>R$ 29,90</span>
+                        <button>Adicionar no carrinho</button>
+                    </div>
+                </div>
+                <div class="PROD">
+                    <img id="img5" src="src/img/ração 5.jpg" />
+                    <div>
+                        <h1>Ração Golden Special </h1>
+                        <h2>para cães adultos frango e carne</h2>
+                        <span>R$ 21,00</span>
+                        <button>Adicionar no carrinho</button>
+                    </div>
+                </div>
+                <div class="PROD">
+                    <img src="src/img/ração 6.webp">
+                    <div>
+                        <h1>Ração Golden Special </h1>
+                        <h2>para cães adultos frango e carne</h2>
+                        <span>R$ 148,90</span>
+                        <button>Adicionar no carrinho</button>
+                    </div>
+                </div>
+                <div class="PROD">
+                    <img src="src/img/ração 7.jpg">
+                    <div>
+                        <h1>Ração Golden Special </h1>
+                        <h2>para cães adultos frango e carne</h2>
+                        <span>R$ 93,90</span>
+                        <button>Adicionar no carrinho</button>
+                    </div>
+                </div>
+            </ul>
+            <div class="secbrinquedos">
+                <h3 class="brin_titu">Brinquedos</h3>
+                <ul class="brinquedos" class="brin_cachorro">
+                    <div class="brin_cachorro">
+                        <img src="./src/img/brinquedo 1.webp">
+                        <h6>Macaco de pelucia</h6>
+                    </div>
+
+                    <div class="brin_cachorro">
+                        <img src="./src/img/brinquedo 2.jpg">
+                        <h6>Pelucia para morder</h6>
+                    </div>
+
+                    <div class="brin_cachorro">
+                        <img src="./src/img/brinquedo 3.webp">
+                        <h6>Pelucia de girafa</h6>
+                    </div>
+
+                    <div class="brin_cachorro">
+                        <img src="./src/img/brinquedo 4.jpg">
+                        <h6>Osso de brinquedo em Y para morder</h6>
+                    </div>
+
+                    <div class="brin_cachorro">
+                        <img src="./src/img/brinquedo 5.webp">
+                        <h6>Brinquedo de roer </h6>
+                    </div>
+
+                    <div class="brin_cachorro">
+                        <img src="./src/img/brinquedo 6.jpg">
+                        <h6>Corda para cachorro</h6>
+                    </div>
+                </ul>
+            </div>
+
+            <div class="secacessorios">
+                <h3 class="acess_titu">Acessórios</h3>
+                <ul class="acesso">
+                    <div class="brin_cachorro">
+                        <img src="./src/img/acessórío 1.jpg">
+                        <h6>Coleira com nome</h6>
+                    </div>
+
+                    <div class="brin_cachorro">
+                        <img src="./src/img/acessórío 2.webp">
+                        <h6>
+                            <P>
+                        </h6>carpete para cachorro com grama</h6>
+                    </div>
+
+                    <div class="brin_cachorro">
+                        <img src="./src/img/acessórío 3.webp">
+                        <h6>Coleira</h6>
+                    </div>
+
+                    <div class="brin_cachorro">
+                        <img src="./src/img/acessórío 4.webp">
+                        <h6>cama para cachorro amarela</h6>
+                    </div>
+
+                    <div class="brin_cachorro">
+                        <img src="./src/img/acessórío 5.jpg">
+                        <h6>gorro de papai noel para cachorro</h6>
+                    </div>
+
+                    <div class="brin_cachorro">
+                        <img src="./src/img/acessórío 6.webp">
+                        <h6>caixa transporte animal</h6>
+                    </div>
+                </ul>
+            </div>
+        </div>
+
+
+        <div class="id_gatos" id="categoria_gato">
+            <div class="cima">
+                <h3>Rações</h3>
+            </div>
+
+            <ul class="itens_gato" id="prod_gato">
+                <div class="PROD">
+                    <img src="./src/img/gran plus gourmet.png">
+                    <div>
+                        <h1>Ração Gran Plus</h1>
+                        <h2>para cães adultos frango e carne</h2>
+                        <span>R$90,70</span>
+                        <button>Adicionar no carrinho</button>
+                    </div>
+                </div>
+
+                <div class="PROD">
+                    <img src="./src/img/balance.png">
+                    <div>
+                        <h1>Ração Balance</h1>
+                        <h2>Gatos Castrados Carne</h2>
+                        <span>R$44,80</span>
+                        <button>Adicionar no carrinho</button>
+                    </div>
+                </div>
+                <div class="PROD">
+                    <img src="./src/img/qualidy (2).png">
+                    <div>
+                        <h1>Ração Qualidy </h1>
+                        <h2>Natural Gatos Castrados Frango com Abóbora e Alecrim</h2>
+                        <span>R$100,00</span>
+                        <button>Adicionar no carrinho</button>
+                    </div>
+                </div>
+                <div class="PROD">
+                    <img src="./src/img/balance (1).png">
+                    <div>
+                        <h1>Ração Royal Canin </h1>
+                        <h2>Idosos Castrados Frango</h2>
+                        <span>R$78,50</span>
+                        <button>Adicionar no carrinho</button>
+                    </div>
+                </div>
+                <div class="PROD">
+                    <img src="./src/img/prime .png">
+                    <div>
+                        <h1>Ração Prime </h1>
+                        <h2>para gatos adultos frango e carne</h2>
+                        <span>R$200,00</span>
+                        <button>Adicionar no carrinho</button>
+                    </div>
+                </div>
+                <div class="PROD">
+                    <img src="./src/img/magnus .png" />
+                    <div>
+                        <h1>Ração magnus</h1>
+                        <h2>Adultos Castrados Frango</h2>
+                        <span>R$120,40</span>
+                        <button>Adicionar no carrinho</button>
+                    </div>
+                </div>
+                <div class="PROD">
+                    <img src="./src/img/especial cat.png">
+                    <div>
+                        <h1>Ração Golden Special </h1>
+                        <h2>para gatos adultos frango e carne</h2>
+                        <span>R$130,00</span>
+                        <button>Adicionar no carrinho</button>
+                    </div>
+                </div>
+                <div class="PROD">
+                    <img src="./src/img/whiskas.png">
+                    <div>
+                        <h1>Ração whiskas </h1>
+                        <h2>Gatos Adultos Carne 2,7 kg</h2>
+                        <span>R$16,99</span>
+                        <button>Adicionar no carrinho</button>
+                    </div>
+                </div>
+            </ul>
+            <div class="secbrinquedos">
+                <h3 class="brin_titu">Brinquedos</h3>
+                <ul class="brinquedos" class="brin_gato">
+                    <div class="brin_gato">
+                        <img src="./src/img/brinquedos.png">
+                        <h6>Abacate catnip</h6>
+                    </div>
+
+                    <div class="brin_gato">
+                        <img src="./src/img/brinquedos gato.png">
+                        <h6>Torre de bolinha</h6>
+                    </div>
+
+                    <div class="brin_gato">
+                        <img src="./src/img/brinquedos gato (1).png">
+                        <h6>Arranhador sanfonado</h6>
+                    </div>
+
+                    <div class="brin_gato">
+                        <img src="./src/img/brinquedos gato (3).png">
+                        <h6>Peixe eletrico</h6>
+                    </div>
+
+                    <div class="brin_gato">
+                        <img src="./src/img/brinquedos gato (4).png">
+                        <h6>Caça bolinhas azul</h6>
+                    </div>
+
+                    <div class="brin_gato">
+                        <img src="./src/img/brinquedos gato (2).png">
+                        <h6>Gato lua</h6>
+                    </div>
+                </ul>
+            </div>
+
+            <div class="secacessorios">
+                <h3 class="acess_titu">Acessórios</h3>
+            <ul class="acesso">
+                <div class="brin_gato">
+                    <img src="./src/img/acessorios gato (3).png">
+                    <h6>Playground</h6>
+                </div>
+
+                <div class="brin_gato">
+                    <img src="./src/img/acessorios gato (8).png">
+                    <h6>Leve 3 pague 2</h6>
+                </div>
+
+                <div class="brin_gato">
+                    <img src="./src/img/acessorios gato (1).png">
+                    <h6>Kit sanitario</h6>
+                </div>
+
+                <div class="brin_gato">
+                    <img src="./src/img/acessorios gato (4).png">
+                    <h6>Oculos</h6>
+                </div>
+
+                <div class="brin_gato">
+                    <img src="./src/img/acessorios gato (6).png">
+                    <h6>Pente escova</h6>
+                </div>
+
+                <div class="brin_gato">
+                    <img src="./src/img/acessorios gato (5).png">
+                    <h6>Tunel colorido</h6>
+                </div>
+            </ul>
+            </div>
+        </div>
+
+        <div class="aves" id="categoria_aves">
+            <div class="cima">
+                <h3>Rações</h3>
+            </div>
+
+            <ul class="itens_aves id=" prod_aves>
+                <div class="PROD">
+                    <img src="./src/img/comidapassaro.png">
+                    <div>
+                        <h1>Ração Nutrópica </h1>
+                        <h2>Natural para Calopsitas </h2>
+                        <span>R$61,90</span>
+                        <button>Adicionar no carrinho</button>
+                    </div>
+                </div>
+
+                <div class="PROD">
+                    <img src="./src/img/reinoAv.png">
+                    <div>
+                        <h1>Alimento Gold </h1>
+                        <h2>Mix Calopsita 500g - Reino Das Aves</h2>
+                        <span>R$61,90</span>
+                        <button>Adicionar no carrinho</button>
+                    </div>
+                </div>
+                <div class="PROD">
+                    <img src="./src/img/suprema.png">
+                    <div>
+                        <h1>Ração Nutrópica</h1>
+                        <h2> Natural para Calopsitas</h2>
+                        <span>R$ 190,90</span>
+                        <button>Adicionar no carrinho</button>
+                    </div>
+                </div>
+                <div class="PROD">
+                    <img src="./src/img/nutropicaa.png">
+                    <div>
+                        <h1>Ração Golden Special </h1>
+                        <h2>para cães adultos frango e carne</h2>
+                        <span>R$ 42,90</span>
+                        <button>Adicionar no carrinho</button>
+                    </div>
+                </div>
+                <div class="PROD">
+                    <img src="./src/img/extraGoldReino.png">
+                    <div>
+                        <h1>Ração Golden Special </h1>
+                        <h2>para cães adultos frango e carne</h2>
+                        <span>R$ 29,90</span>
+                        <button>Adicionar no carrinho</button>
+                    </div>
+                </div>
+                <div class="PROD">
+                    <img src="./src/img/tucaroRacao.png" />
+                    <div>
+                        <h1>Ração Golden Special </h1>
+                        <h2>para cães adultos frango e carne</h2>
+                        <span>R$ 21,00</span>
+                        <button>Adicionar no carrinho</button>
+                    </div>
+                </div>
+                <div class="PROD">
+                    <img src="./src/img/Boiadeiro.png">
+                    <div>
+                        <h1>Ração Golden Special </h1>
+                        <h2>para cães adultos frango e carne</h2>
+                        <span>R$ 148,90</span>
+                        <button>Adicionar no carrinho</button>
+                    </div>
+                </div>
+                <div class="PROD">
+                    <img src="./src/img/megaAraras.png">
+                    <div>
+                        <h1>Super Premium Mega Zoo </h1>
+                        <h2>Araras Com Frutas e Legumes</h2>
+                        <span>R$ 93,90</span>
+                        <button>Adicionar no carrinho</button>
+                    </div>
+                </div>
+            </ul>
+            <div class="secbrinquedos">
+                <h3 class="brin_titu">Brinquedos</h3>
+            <ul class="brinquedos" class="brin_aves">
+                <div class="brin_aves">
+                    <img src="./src/img/BalançoAve.png">
+                    <h6>Aves Balanço Plataforma</h6>
+                </div>
+
+                <div class="brin_aves">
+                    <img src="./src/img/playgroundAVe.png">
+                    <h6>Playground 100% Natural Para Periquito</h6>
+                </div>
+
+                <div class="brin_aves">
+                    <img src="./src/img/PonteFleAVE.png">
+                    <h6>Brinquedo Ponte Flexível 32cm</h6>
+                </div>
+
+                <div class="brin_aves">
+                    <img src="./src/img/brinquedo 4.jpg">
+                    <h6>Osso de brinquedo em Y para morder</h6>
+                </div>
+
+                <div class="brin_aves">
+                    <img src="./src/img/brinquedo 5.webp">
+                    <h6>Brinquedo de roer </h6>
+                </div>
+
+                <div class="brin_aves">
+                    <img src="./src/img/brinquedo 6.jpg">
+                    <h6>Corda para_aves</h6>
+                </div>
+            </ul>
+            </div>
+            
+            <div class="secacessorios">
+                <h3 class="acess_titu">Acessórios</h3>
+            <ul class="acesso">
+                <div class="brin_aves">
+                    <img src="./src/img/acessórío 1.jpg">
+                    <h6>Coleira com nome</h6>
+                </div>
+
+                <div class="brin_aves">
+                    <img src="./src/img/acessórío 2.webp">
+                    <h6>
+                        <P>
+                    </h6>carpete para_aves com grama</h6>
+                </div>
+
+                <div class="brin_aves">
+                    <img src="./src/img/acessórío 3.webp">
+                    <h6>Coleira</h6>
+                </div>
+
+                <div class="brin_aves">
+                    <img src="./src/img/acessórío 4.webp">
+                    <h6>cama para_aves amarela</h6>
+                </div>
+
+                <div class="brin_aves">
+                    <img src="./src/img/acessórío 5.jpg">
+                    <h6>gorro de papai noel para_aves</h6>
+                </div>
+
+                <div class="brin_aves">
+                    <img src="./src/img/acessórío 6.webp">
+                    <h6>caixa transporte animal</h6>
+                </div>
+            </ul>
+            </div>
+            
+        </div>
+
+
+        <div class="peixes" id="categoria_peixe">
+            <div class="cima">
+                <h3>Rações</h3>
+            </div>
+
+            <ul class="itens_peixe" id="prod_peixe">
+                <div class="PROD">
+                    <img src="src/img/image 8.png">
+                    <div>
+                        <h1>Ração Golden Special </h1>
+                        <h2>para cães adultos frango e carne</h2>
+                        <span>R$ 21,90</span>
+                        <button>Adicionar no carrinho</button>
+                    </div>
+                </div>
+
+                <div class="PROD">
+                    <img src="src/img/ração 8.jpg">
+                    <div>
+                        <h1>Ração Golden Special </h1>
+                        <h2>para cães adultos frango e carne</h2>
+                        <span>R$ 3,90</span>
+                        <button>Adicionar no carrinho</button>
+                    </div>
+                </div>
+                <div class="PROD">
+                    <img src="src/img/ração 2.jpg">
+                    <div>
+                        <h1>Ração Golden Special </h1>
+                        <h2>para cães adultos frango e carne</h2>
+                        <span>R$ 190,90</span>
+                        <button>Adicionar no carrinho</button>
+                    </div>
+                </div>
+                <div class="PROD">
+                    <img src="src/img/ração 3.jpg">
+                    <div>
+                        <h1>Ração Golden Special </h1>
+                        <h2>para cães adultos frango e carne</h2>
+                        <span>R$ 42,90</span>
+                        <button>Adicionar no carrinho</button>
+                    </div>
+                </div>
+                <div class="PROD">
+                    <img src="src/img/ração 4 (2).jpg">
+                    <div>
+                        <h1>Ração Golden Special </h1>
+                        <h2>para cães adultos frango e carne</h2>
+                        <span>R$ 29,90</span>
+                        <button>Adicionar no carrinho</button>
+                    </div>
+                </div>
+                <div class="PROD">
+                    <img src="src/img/ração 5.jpg" />
+                    <div>
+                        <h1>Ração Golden Special </h1>
+                        <h2>para cães adultos frango e carne</h2>
+                        <span>R$ 21,00</span>
+                        <button>Adicionar no carrinho</button>
+                    </div>
+                </div>
+                <div class="PROD">
+                    <img src="src/img/ração 6.webp">
+                    <div>
+                        <h1>Ração Golden Special </h1>
+                        <h2>para cães adultos frango e carne</h2>
+                        <span>R$ 148,90</span>
+                        <button>Adicionar no carrinho</button>
+                    </div>
+                </div>
+                <div class="PROD">
+                    <img src="src/img/ração 7.jpg">
+                    <div>
+                        <h1>Ração Golden Special </h1>
+                        <h2>para cães adultos frango e carne</h2>
+                        <span>R$ 93,90</span>
+                        <button>Adicionar no carrinho</button>
+                    </div>
+                </div>
+            </ul>
+            <div class="secbrinquedos">
+                <h3 class="brin_titu">Brinquedos</h3>
+            <ul class="brinquedos" class="brin_peixe">
+                <div class="brin_peixe">
+                    <img src="./src/img/brinquedo 1.webp">
+                    <h6>Macaco de pelucia</h6>
+                </div>
+
+                <div class="brin_peixe">
+                    <img src="./src/img/brinquedo 2.jpg">
+                    <h6>Pelucia para morder</h6>
+                </div>
+
+                <div class="brin_peixe">
+                    <img src="./src/img/brinquedo 3.webp">
+                    <h6>Pelucia de girafa</h6>
+                </div>
+
+                <div class="brin_peixe">
+                    <img src="./src/img/brinquedo 4.jpg">
+                    <h6>Osso de brinquedo em Y para morder</h6>
+                </div>
+
+                <div class="brin_peixe">
+                    <img src="./src/img/brinquedo 5.webp">
+                    <h6>Brinquedo de roer </h6>
+                </div>
+
+                <div class="brin_peixe">
+                    <img src="./src/img/brinquedo 6.jpg">
+                    <h6>Corda para_roedores</h6>
+                </div>
+            </ul>
+            </div>
+            
+            <div class="secacessorios">
+                <h3 class="acess_titu">Acessórios</h3>
+            <ul class="acesso">
+                <div class="brin_peixe">
+                    <img src="./src/img/acessórío 1.jpg">
+                    <h6>Coleira com nome</h6>
+                </div>
+
+                <div class="brin_peixe"">
+                                    <img src=" ./src/img/acessórío 2.webp">
+                    <h6>
+                        <P>
+                    </h6>carpete para_roedores com grama</h6>
+                </div>
+
+                <div class="brin_peixe"">
+                                    <img src=" ./src/img/acessórío 3.webp">
+                    <h6>Coleira</h6>
+                </div>
+
+                <div class="brin_peixe"">
+                                    <img src=" ./src/img/acessórío 4.webp">
+                    <h6>cama para_roedores amarela</h6>
+                </div>
+
+                <div class="brin_peixe"">
+                                    <img src=" ./src/img/acessórío 5.jpg">
+                    <h6>gorro de papai noel para_roedores</h6>
+                </div>
+
+                <div class="brin_peixe">
+                    <img src="./src/img/acessórío 6.webp">
+                    <h6>caixa transporte animal</h6>
+                </div>
+            </ul>
+            </div>
+            
+        </div>
+
+
+        <div class="roedores" id="categoria_roedores">
+            <div class="cima">
+                <h3>Rações</h3>
+            </div>
+
+            <ul class="itens_roedores" id="prod_roedores">
+                <div class="PROD">
+                    <img src="src/img/image 8.png">
+                    <div>
+                        <h1>Ração Golden Special </h1>
+                        <h2>para cães adultos frango e carne</h2>
+                        <span>R$ 21,90</span>
+                        <button>Adicionar no carrinho</button>
+                    </div>
+                </div>
+
+                <div class="PROD">
+                    <img src="src/img/ração 8.jpg">
+                    <div>
+                        <h1>Ração Golden Special </h1>
+                        <h2>para cães adultos frango e carne</h2>
+                        <span>R$ 3,90</span>
+                        <button>Adicionar no carrinho</button>
+                    </div>
+                </div>
+                <div class="PROD">
+                    <img src="src/img/ração 2.jpg">
+                    <div>
+                        <h1>Ração Golden Special </h1>
+                        <h2>para cães adultos frango e carne</h2>
+                        <span>R$ 190,90</span>
+                        <button>Adicionar no carrinho</button>
+                    </div>
+                </div>
+                <div class="PROD">
+                    <img src="src/img/ração 3.jpg">
+                    <div>
+                        <h1>Ração Golden Special </h1>
+                        <h2>para cães adultos frango e carne</h2>
+                        <span>R$ 42,90</span>
+                        <button>Adicionar no carrinho</button>
+                    </div>
+                </div>
+                <div class="PROD">
+                    <img src="src/img/ração 4 (2).jpg">
+                    <div>
+                        <h1>Ração Golden Special </h1>
+                        <h2>para cães adultos frango e carne</h2>
+                        <span>R$ 29,90</span>
+                        <button>Adicionar no carrinho</button>
+                    </div>
+                </div>
+                <div class="PROD">
+                    <img src="src/img/ração 5.jpg" />
+                    <div>
+                        <h1>Ração Golden Special </h1>
+                        <h2>para cães adultos frango e carne</h2>
+                        <span>R$ 21,00</span>
+                        <button>Adicionar no carrinho</button>
+                    </div>
+                </div>
+                <div class="PROD">
+                    <img src="src/img/ração 6.webp">
+                    <div>
+                        <h1>Ração Golden Special </h1>
+                        <h2>para cães adultos frango e carne</h2>
+                        <span>R$ 148,90</span>
+                        <button>Adicionar no carrinho</button>
+                    </div>
+                </div>
+                <div class="PROD">
+                    <img src="src/img/ração 7.jpg">
+                    <div>
+                        <h1>Ração Golden Special </h1>
+                        <h2>para cães adultos frango e carne</h2>
+                        <span>R$ 93,90</span>
+                        <button>Adicionar no carrinho</button>
+                    </div>
+                </div>
+            </ul>
+            <div class="secbrinquedos">
+                <h3 class="brin_titu">Brinquedos</h3>
+            <ul class="brinquedos" class="brin_roedores">
+                <div class="brin_roedores">
+                    <img src="./src/img/brinquedo 1.webp">
+                    <h6>Macaco de pelucia</h6>
+                </div>
+
+                <div class="brin_roedores">
+                    <img src="./src/img/brinquedo 2.jpg">
+                    <h6>Pelucia para morder</h6>
+                </div>
+
+                <div class="brin_roedores">
+                    <img src="./src/img/brinquedo 3.webp">
+                    <h6>Pelucia de girafa</h6>
+                </div>
+
+                <div class="brin_roedores">
+                    <img src="./src/img/brinquedo 4.jpg">
+                    <h6>Osso de brinquedo em Y para morder</h6>
+                </div>
+
+                <div class="brin_roedores">
+                    <img src="./src/img/brinquedo 5.webp">
+                    <h6>Brinquedo de roer </h6>
+                </div>
+
+                <div class="brin_roedores">
+                    <img src="./src/img/brinquedo 6.jpg">
+                    <h6>Corda para cachorro</h6>
+                </div>
+            </ul>
+            </div>
+            
+            <div class="secacessorios">
+                <h3 class="acess_titu">Acessórios</h3>
+            <ul class="acesso">
+                <div class="brin_roedores">
+                    <img src="./src/img/acessórío 1.jpg">
+                    <h6>Coleira com nome</h6>
+                </div>
+
+                <div class="brin_roedores">
+                    <img src="./src/img/acessórío 2.webp">
+                    <h6>
+                        <P>
+                    </h6>carpete para cachorro com grama</h6>
+                </div>
+
+                <div class="brin_roedores">
+                    <img src="./src/img/acessórío 3.webp">
+                    <h6>Coleira</h6>
+                </div>
+
+                <div class="brin_roedores">
+                    <img src="./src/img/acessórío 4.webp">
+                    <h6>cama para cachorro amarela</h6>
+                </div>
+
+                <div class="brin_roedores">
+                    <img src="./src/img/acessórío 5.jpg">
+                    <h6>gorro de papai noel para cachorro</h6>
+                </div>
+
+                <div class="brin_roedores">
+                    <img src="./src/img/acessórío 6.webp">
+                    <h6>caixa transporte animal</h6>
+                </div>
+            </ul>
+            </div>
+            
+        </div>
+
+
+    </section>
+
+    <section class="depoimentos">
+        <h2>Depoimento dos clientes</h2>
+        <ul class="avaliacoes" id="ava">
+            <div id="pessoa1">
+                <img src="./src/img/pessoa 1.png" />
+                <h4>Mariana L.</h4>
+                <h4>Adoro a PetPatinhas!
+                    <p> Sempre encontro tudo o que meu cachorro </p>
+                    <p> precisa, desde ração até brinquedos </p>
+                    <p>divertidos. O atendimento é </p>
+                    <p>maravilhoso, e os preços são ótimos.</p>
+                    Super recomendo!
+                </h4>
+            </div>
+            <div id="pessoa2">
+                <img src="./src/img/pessoa 2.png" />
+                <h4>João M.</h4>
+                <h4>
+                    <p>Comprei uma coleira nova para o </p>
+                    <p>meu gato e ele amou! A qualidade </p>
+                    <p>dos produtos da PetPatinhas é </p>
+                    <p>incrível, e a entrega foi super rápida. </p>
+                    <p>Já sou cliente fiel! </p>
+                </h4>
+            </div>
+            <div id="pessoa3">
+                <img src="./src/img/pessoa 3.png" />
+                <h4>Carla R.</h4>
+                <h4>
+                    <p>A PetPatinhas é o melhor pet shop</p>
+                    <P>da cidade! Sempre encontro </p>
+                    <P>produtos de qualidade e o </p>
+                    <P>atendimento é personalizado. Meu </p>
+                    <P>cachorro nunca foi tão bem tratado! </p>
+                </h4>
+            </div>
+        </ul>
+    </section>
+
+    <section id="sobre-nos" class="sobre-nos" class="informacoes">
+        <h2 id="sobre">Sobre nós</h2>
+        <h3 id="texto">
+            <p>
+                Na PETPATINHAS, acreditamos que cada animal de estimação é parte da família e merece ser tratado com
+                todo o carinho e dedicação.
+                Fundada por amantes dos pets, nossa missão é proporcionar um ambiente acolhedor onde os tutores possam
+                encontrar tudo o que seus companheiros precisam para viver felizes e saudáveis.
+            </p>
+            <p>
+                Nosso compromisso vai além da venda de produtos e serviços; criar uma experiência única para você e seu
+                pet.
+                Desde a seleção cuidadosa de alimentos e acessórios até nossos serviços de banho, tosa e cuidados
+                especializados, tudo é pensado para promover o bem-estar e a felicidade dos nossos amigos de quatro
+                patas.
+            </p>
+            <p>
+                Na PETPATINHAS, cada patinha que atravessa nossa porta deixa uma marca de alegria.
+                Junte-se a nós nessa jornada de amor e cuidado, e descubra como podemos fazer a diferença na vida do seu
+                pet!
+            </p>
+        </h3>
+    </section>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="./src/pet_shop.js"></script>
+
+    <footer>
+        <div class="pag">
+            <h4> Formas de Pagamento </h4>
+            <img src="./src/img/pagamentos.png" />
+            <h5>CNPJ: 70.415.977/0001-55</h5>
+        </div>
+        <div>
+            <div class="redesociais">
+                <ul class="rede">
+                    <a href="https://www.instagram.com/petpatinhas_sp/">
+                        <li style="--cor1: #ff0000; --cor2: #ff4cc3;">
+                            <span class="icon"><i class="bi bi-instagram"></i></span>
+                            <span class="text">Instagram</span>
+                        </li>
+                    </a>
+                    <a href="https://wa.me/5511975345659">
+                        <li style="--cor1: #00f70c; --cor2: #0b6100;">
+                            <span class="icon"><i class="bi bi-whatsapp"></i></span>
+                            <span class="text">Whatsapp</span>
+                        </li>
+                    </a>
+
+                </ul>
+            </div>
+        </div>
+
+    </footer>
+
+</body>
+
+</html>
