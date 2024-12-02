@@ -698,6 +698,23 @@ footer img {
     
 }
 
+.btnCat {
+    margin-left: 50px;
+    margin-right: 50px;
+    color: #fafafa;
+    background-color: #81d5ea;
+    border: 5px;
+    padding: 10px 0;
+    border-radius: 50px;
+    width: 200px;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    transition: all .4s ease-in-out;
+    cursor: pointer;
+}
+
+
+
 @media  (width <= 640px)
 {
     body
@@ -935,6 +952,7 @@ footer img {
 
         display: block;
     }
+}
 
 @media (width >= 641px)
 {
@@ -1094,6 +1112,10 @@ footer img {
 .PROD:hover {
     transform: scale(1.1);
     box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.25);
+}
+
+.id_gato {
+    flex-direction: column;
 }
 
 aside {
